@@ -1,0 +1,161 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap');
+
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #DBDFEA;
+  color: #FFDE00;
+  line-height: 1.6;
+  
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 5em;
+  font-family: 'Pokemon Solid', sans-serif; 
+  -webkit-text-stroke: 4px #3B4CCA;
+}
+.pokemon-container {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 20px;
+}
+.pokemon {
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 5px solid #B3A125;
+  background-color: #9DB2BF;
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Handjet', cursive;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: transform .2s;
+}
+
+.pokemon span {
+  flex: 1;
+}
+.name-and-type{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.pokemon img {
+  width: 50%;
+  
+}
+.pokemon:hover{
+  transform: scale(1.05);
+}
+
+.load-more {
+  background-color: #FFDE00;
+  border: 3px solid #3B4CCA;
+  cursor: pointer;
+  color: #3B4CCA;
+  font-size: 2em;
+  font-family: 'Handjet', cursive;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+}
+p{
+  color: white;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #007bff;
+}
+
+.pagination button:hover {
+  background-color: #f2f2f2;
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it's on top of other content */
+}
+
+.loading-message {
+  font-size: 24px;
+  font-weight: bold;
+}
+@media only screen and (min-width: 512px) and (max-width: 767px){
+  h1 {
+    font-size: 3em;
+  }
+  .pokemon {
+    font-size: 1em;
+  }
+  .pokemon img {
+    width:fit-content
+  }
+  .load-more{
+    width: 20%;
+    font-size: 1.5em;
+  }
+  
+}
+@media only screen  and (max-width: 511px){
+  h1 {
+    font-size: 3em;
+  }
+  .pokemon {
+    font-size: 0.75em;
+  }
+  .pokemon img {
+    width:fit-content
+  }
+  .load-more{
+    width: 25%;
+    font-size: 1.5em;
+  }
+}
